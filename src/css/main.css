@@ -1,0 +1,13 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #555;
+	color: #dedede;
+}
+
+h1 {
+	display: flex;
+}
+
