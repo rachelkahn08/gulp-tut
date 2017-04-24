@@ -1,9 +1,11 @@
 var gulp = require('gulp'),
-	jshint = require('gulp-jshint')
-	uglify = require('gulp-uglify')
-	rename = require('gulp-rename')
-	concat = require('gulp-concat')
-	del = require('del')
+	jshint = require('gulp-jshint'),
+	uglify = require('gulp-uglify'),
+	rename = require('gulp-rename'),
+	concat = require('gulp-concat'),
+	del = require('del'),
+	scss = require('gulp-sass'),
+	sourcemaps = require('gulp-sourcemaps'),
 	autoprefixer = require('gulp-autoprefixer');
 
 var browserSync = require('browser-sync').create();
@@ -17,8 +19,11 @@ gulp.task('browserSync', function() {
 });
 
 gulp.task('styles', function() {
-	return gulp.src('src/css/**/*.css')
+	return gulp.src('src/scss/**/*.scss')
+	.pipe(sourcemaps.init())
+	.pipe(scss())
 	.pipe(autoprefixer('last 4 version'))
+	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('assets/css'))
 	.pipe(browserSync.reload({stream: true}));
 });
@@ -43,6 +48,6 @@ gulp.task('hi', function() {
 gulp.task('default', ['clean', 'styles', 'scripts']);
 
 gulp.task('watch', ['clean', 'styles', 'scripts', 'browserSync'], function() {
-	gulp.watch('src/css/**/*.css', ['styles']);
+	gulp.watch('src/scss/**/*.scss', ['styles']);
 	gulp.watch('src/js/**/*.js', ['scripts']);
 });

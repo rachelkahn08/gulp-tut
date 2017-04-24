@@ -1,14 +1,12 @@
 * {
-	box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
-	background: #555;
-	color: #dedede;
-}
+  background: #555;
+  color: #dedede; }
 
 h1 {
-	display: -ms-flexbox;
-	display: flex;
-}
+  display: -ms-flexbox;
+  display: flex; }
 
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIl9ob21lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDQyx1QkFBc0IsRUFDdEI7O0FBRUQ7RUFDQyxpQkFBZ0I7RUFDaEIsZUFBYyxFQUNkOztBQUVEO0VBQ0MscUJBQWE7RUFBYixjQUFhLEVBQ2IiLCJmaWxlIjoibWFpbi5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIqIHtcblx0Ym94LXNpemluZzogYm9yZGVyLWJveDtcbn1cblxuYm9keSB7XG5cdGJhY2tncm91bmQ6ICM1NTU7XG5cdGNvbG9yOiAjZGVkZWRlO1xufVxuXG5oMSB7XG5cdGRpc3BsYXk6IGZsZXg7XG59XG5cblxuXG4iXX0= */
